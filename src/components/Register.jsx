@@ -21,8 +21,7 @@ function Register() {
         fd.append("avatar",file)
         try{
             const result=await userRegister(fd)
-            dispatch(login(result.data))
-            navigate('/')
+            navigate('/login')
         }catch(error){
             alert("something went wrong")
         }
